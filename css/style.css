@@ -1,0 +1,128 @@
+/* Rodape */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer {
+    background-color: #343A40;
+}
+
+footer p {
+    font-size: .9rem;
+    color: #999;
+}
+
+footer nav ul {
+    max-width: 280px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Ícones Redes Sociais */
+.c-link--github:hover {
+    color: #EA4E2E;
+}
+
+.c-link--linkedin:hover {
+    color: #0077B5;
+}
+
+.c-link--github:hover::after {
+    background: #EA4E2E;
+}
+
+.c-link--linkedin:hover::after {
+    background: #0077B5;
+}
+
+.c-link {
+    position: relative;
+    color: #999;
+}
+
+.c-link:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+.c-tooltip::before,
+.c-tooltip::after {
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -10px);
+    transform: translate(-50%, -10px);
+    opacity: 0;
+    transition: .2s;
+}
+
+.c-tooltip::before {
+    content: '';
+    bottom: calc(100% + 2px);
+    border: solid 5px transparent;
+    border-top-color: currentColor;
+}
+
+.c-tooltip::after {
+    content: attr(aria-label);
+    bottom: calc(100% + 12px);
+    padding: .61em .93em;
+    font-size: .875rem;
+    color: #FFF;
+    border-radius: 3px;
+}
+
+.c-tooltip:hover::before,
+.c-tooltip:hover::after {
+    opacity: 1;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+footer nav ul li {
+    font-size: 1.8rem;
+    padding: 10px;
+}
+
+.creditos {
+    margin-bottom: 30px;
+}
+
+.creditos a {
+    color: #17a2b8;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.creditos a:hover {
+    color: #0d8597;
+}
+
+.creditos span {
+    font-weight: bold;
+}
+
+.text-obrigatorio {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 13px;
+    color: 
+    #555;
+}
+
+.logo {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.sucesso {
+    width: 100vw;
+    margin: 1rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

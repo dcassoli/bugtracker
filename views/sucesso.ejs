@@ -1,0 +1,94 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="BugTracker | Sistema de Relato de Bugs">
+    <meta name="author" content="Daniel Cassoli">
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="São Paulo">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="BugTracker | Sistema de Relato de Bugs">
+    <meta property="og:description" content="BugTracker | Sistema de Relato de Bugs">
+    <meta property="og:image" content="img/favicons/bug.png">
+    <meta property="og:image:secure_url" content="img/favicons/bug.png">
+    <title>BugTracker - Obrigado!</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/bug.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/bug.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/bug.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script>
+        // navegador + relogio
+        document.onreadystatechange = () => {
+            if (document.readyState === 'interactive') {
+                document.getElementById('userAgent').value = window.navigator.userAgent;
+                document.getElementById('userDate').value = new Date();
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow mb-5">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="img/bugtracker.png" width="180" height="30" class="d-inline-block align-top" alt="">
+             | by Daniel Cassoli</small></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                style="outline: none">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item">
+                        <a href="https://github.com/dcassoli" target="_blank"
+                            class="btn btn-outline-light px-3 py-2"><i class="fab fa-github"></i> GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Fim Navbar -->
+
+    <div class="container col-lg-12 sucesso">
+        <div class="alert alert-success" role="alert">
+            Seu problema foi reportado com sucesso!<br />
+            Obrigado!<br /><br />
+            <a href="/">Voltar e Reportar mais um problema</a>
+        </div>
+    </div>
+
+    <br /><br />
+    <footer class="container-fluid  text-center py-5">
+        <aside>
+            <nav>
+                <ul class="d-flex justify-content-center">
+                    <li>
+                        <a href="https://github.com/dcassoli" target="_blank"
+                            class="c-link c-link--github c-tooltip" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/daniel-cassoli-11225b16" target="_blank"
+                            class="c-link c-link--linkedin c-tooltip" aria-label="Linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="container creditos">
+            <p>&copy; 2019 | Desenvolvido por <a href="http://www.foxydev.com.br">
+                    <span>Daniel Cassoli</span></a> e hospedado em <a href="https://zeit.co/"
+                    target="_blank"><span>ZEIT Now</span></a>.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

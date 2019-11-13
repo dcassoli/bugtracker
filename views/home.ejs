@@ -1,0 +1,136 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="BugTracker | Sistema de Relato de Bugs">
+    <meta name="author" content="Daniel Cassoli">
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="São Paulo">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="BugTracker | Sistema de Relato de Bugs">
+    <meta property="og:description" content="BugTracker | Sistema de Relato de Bugs">
+    <meta property="og:image" content="img/favicons/bug.png">
+    <meta property="og:image:secure_url" content="img/favicons/bug.png">
+    <title>BugTracker</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/bug.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/bug.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/bug.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script>
+        // navegador + relogio
+        document.onreadystatechange = () => {
+            if (document.readyState === 'interactive') {
+                document.getElementById('userAgent').value = window.navigator.userAgent;
+                document.getElementById('userDate').value = new Date();
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow mb-5">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="img/bugtracker.png" width="180" height="30" class="d-inline-block align-top" alt="">
+             | by Daniel Cassoli</small></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                style="outline: none">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item">
+                        <a href="https://github.com/dcassoli" target="_blank"
+                            class="btn btn-outline-light px-3 py-2"><i class="fab fa-github"></i> GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Fim Navbar -->
+
+    <div class="container col-lg-6 center">
+        <div class="logo">
+            <p><img src="img/bugtracker.png" /></p>
+            <h2>Ferramenta de relato de Bugs</h2>
+        </div>    
+        <div class="text-obrigatorio">
+            <p>Preencha todos os dados a seguir.</p>
+        </div>
+        <form method="post">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name" class="form-control" required="" />
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" class="form-control" required="" />
+            </div>
+
+            <div class="form-group">    
+                <label for="issueType">Classificação:</label>
+                <select name="issueType" id="issueType" class="form-control" required="">
+                    <option value="">Selecione</option>
+                    <option value="Crítico">Crítico</option>
+                    <option value="Bug">Bug</option>
+                    <option value="Melhoria">Melhoria</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="howToReproduce">Como reproduzir o erro?</label>
+                <input type="text" name="howToReproduce" id="howToReproduce" class="form-control" required="" />
+            </div>
+
+            <div class="form-group">    
+                <label for="expectedOutput">A saída esperada?</label>
+                <textarea name="expectedOutput" id="expectedOutput" class="form-control" required=""></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="receivedOutput">A saída recebida?</label>
+                <textarea name="receivedOutput" id="receivedOutput" class="form-control" required=""></textarea>
+            </div>
+
+            <input type="hidden" name="userAgent" id="userAgent" />
+            <input type="hidden" name="userDate" id="userDate" />
+
+            <button class="btn btn-primary">Enviar Solicitação</button>
+        </form>
+    </div>
+    <br /><br />
+    <footer class="container-fluid  text-center py-5">
+        <aside>
+            <nav>
+                <ul class="d-flex justify-content-center">
+                    <li>
+                        <a href="https://github.com/dcassoli" target="_blank"
+                            class="c-link c-link--github c-tooltip" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/daniel-cassoli-11225b16" target="_blank"
+                            class="c-link c-link--linkedin c-tooltip" aria-label="Linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="container creditos">
+            <p>&copy; 2019 | Desenvolvido por <a href="http://www.foxydev.com.br">
+                    <span>Daniel Cassoli</span></a> e hospedado em <a href="https://zeit.co/"
+                    target="_blank"><span>ZEIT Now</span></a>.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
